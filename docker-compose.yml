@@ -10,4 +10,5 @@ services:
       - "./data:/mlflow"
     environment:
       BACKEND_URI: sqlite:////mlflow/mlflow.db
-      ARTIFACT_ROOT: /mlflow/artifacts
+      ARTIFACTS_DESTINATION: ${ARTIFACTS_DESTINATION}
+      AZURE_STORAGE_CONNECTION_STRING: ${AZURE_STORAGE_CONNECTION_STRING}
